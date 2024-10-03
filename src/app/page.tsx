@@ -1,101 +1,86 @@
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import HTML from "./image/IMAGE1.png"
+import CSS from "./image/IMAGE2.png"
+import tailwindcss from "./image/IMAGE3.png"
+import javascript from "./image/IMAGE.4.png"
+import typescript from "./image/image5.png"
+import NEXTJS from "./image/image6.png"
+import mainpic from "./image/image11.png"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+export default function HeroSection() {
+  return (
+    <div>
+      {/* Hero Section */}
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="container mx-auto flex items-center justify-between px-6">
+          {/* Left side text content */}
+          <div>
+            <h1 className="text-4xl font-bold text-gray-900">
+              Hi,<br />
+              I’m <span className="text-blue-500">BISMAH NAEEM</span><br />
+                Junior Frontened Web DEVELOPER
+            </h1>
+            <button className="mt-6 bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600">
+              MY RESUME
+            </button>
+          </div>
+
+          {/* Right side image content */}
+          <div className="relative">
+        
+            {/* Profile image */}
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={mainpic} 
+              alt="WEB"
+              className="relative w-96 h-96 rounded-full object-cover"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+
+      {/* Skills Section */}
+      <section className="bg-neutral-400 py-12">
+        <div className="text-center text-white mb-8">
+          <h2 className="text-3xl font-bold">My Skills ⚡</h2>
+        </div>
+        <div className="bg-gray-100 py-8 rounded-tl-3xl rounded-tr-3xl">
+          <div className="container mx-auto grid grid-cols-3 gap-8 md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-2 px-4">
+            <div className="flex flex-col items-center">
+              <Image src={HTML} alt="HTML" className="w-20 h-20" />
+              <p className="mt-4 text-lg">HTML</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src={CSS} alt="CSS3" className="w-20 h-20" />
+              <p className="mt-4 text-lg">CSS3</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src={tailwindcss} alt="CSS3" className="w-20 h-20" />
+              <p className="mt-4 text-lg">Tailwind css</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src={javascript} alt="JAVASCRIPT" className="w-20 h-20" />
+              <p className="mt-4 text-lg">JAVASCRIPT</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src={typescript} alt="TYPESCRIPT" className="w-20 h-20" />
+              <p className="mt-4 text-lg">TYPESCRIPT</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Image src={NEXTJS} alt="NEXT.JS" className="w-20 h-20" />
+              <p className="mt-4 text-lg">NEXT.JS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-neutral-900 text-white py-4 mt-4">
+        <div className="container mx-auto text-center">
+          <p> Thanks for visiting.</p>
+        </div>
       </footer>
     </div>
   );
 }
+
