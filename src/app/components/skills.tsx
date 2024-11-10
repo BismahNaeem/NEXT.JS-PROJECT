@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Skills() {
     return (
-        <div className=" pt-11 bg-slate-100">
+        <div className=" pt-11 bg-slate-100 ">
             {/* Heading */}
             <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-black">My Skills ⚡</h2>

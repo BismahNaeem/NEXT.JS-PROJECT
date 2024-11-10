@@ -1,11 +1,8 @@
-
-
-export default function Home(){
+import Project from "../components/projects"
+export default function Projects(){
      return(
-       <div className="h-screen text-center font-bold mt-11">
+      
+       <Project />
        
-       COMING SOON !
-       
-       </div>
      )
    }
